@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 import { Entypo, AntDesign, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 
 import { createStackNavigator } from "@react-navigation/stack";
@@ -15,6 +15,7 @@ import OnboardingScreen from "../screens/OnboardingScreen";
 import LoginScreen from "../screens/LoginScreen";
 import SignupScreen from "../screens/SignupScreen";
 import { useEffect, useState } from "react";
+import UserDetailsScreen from "../screens/UserDetailsScreen";
 
 const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -100,7 +101,11 @@ const BottomStack = () => {
 				component={Screen2}
 				options={{
 					tabBarIcon: ({ focused }) => (
-						<Ionicons name="ios-add-circle" size={72} color="#f14f86" />
+						<Ionicons
+							name="ios-add-circle"
+							size={Platform.OS === "ios" ? 48 : 60}
+							color="#f14f86"
+						/>
 					),
 				}}
 			/>
@@ -170,6 +175,11 @@ const AppStack = () => {
 			<Stack.Screen
 				name="Login"
 				component={LoginScreen}
+				options={{ header: () => null }}
+			/>
+			<Stack.Screen
+				name="User Details"
+				component={UserDetailsScreen}
 				options={{ header: () => null }}
 			/>
 			<Stack.Screen
