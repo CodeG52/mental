@@ -47,7 +47,7 @@ const HomeStories = () => {
 export default HomeStories;
 
 const styles = StyleSheet.create({
-	container: { flexDirection: "row" },
+	container: { flexDirection: "row", marginBottom: 10 },
 	contents: {
 		height: circleSize,
 		width: circleSize,

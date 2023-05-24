@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { windowHeight } from "../utils/Dimensions";
 
 export const AppStyles = StyleSheet.create({
 	container: {
@@ -36,10 +37,11 @@ export const profileStyles = StyleSheet.create({
 		paddingHorizontal: 0,
 	},
 	top: {
-		height: "55%",
+		height: 0.45 * windowHeight,
+		marginBottom: 10,
 	},
 	bottom: {
-		flex: 1,
+		// flex: 1,
 		paddingHorizontal: 20,
 		justifyContent: "space-between",
 	},

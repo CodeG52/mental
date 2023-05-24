@@ -103,8 +103,9 @@ const BottomStack = () => {
 					tabBarIcon: ({ focused }) => (
 						<Ionicons
 							name="ios-add-circle"
-							size={Platform.OS === "ios" ? 48 : 60}
+							size={Platform.OS === "ios" ? 52 : 62}
 							color="#f14f86"
+							style={{ bottom: 15 }}
 						/>
 					),
 				}}

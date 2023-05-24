@@ -5,6 +5,7 @@ import { Entypo, AntDesign } from "@expo/vector-icons";
 
 import { AppStyles } from "../../styles/AppStyles";
 import { LinearGradient } from "expo-linear-gradient";
+import { windowHeight } from "../../utils/Dimensions";
 
 const Achievements = () => {
 	return (
@@ -45,7 +46,7 @@ export default Achievements;
 
 const styles = StyleSheet.create({
 	container: {
-		height: "26%",
+		height: 0.1 * windowHeight,
 		backgroundColor: "#2f2f2f",
 		borderRadius: 15,
 		paddingHorizontal: 15,

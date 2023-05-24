@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 
 import HomeStories from "../sections/Home/HomeStories";
 import HomeShare from "../sections/Home/HomeShare";
@@ -7,23 +7,29 @@ import HomeCategories from "../sections/Home/HomeCategories";
 
 import { AppStyles, homeStyles as styles } from "../styles/AppStyles";
 import ThoughtCard from "../components/Home/ThoughtCard";
+import { windowHeight } from "../utils/Dimensions";
 
 const HomeScreen = () => {
 	return (
 		<View style={[AppStyles.container, styles.container]}>
-			<View style={{ height: "10%" }}>
-				<HomeHero />
-			</View>
-			<View style={{ height: "10%" }}>
-				<HomeShare />
-			</View>
-			<HomeStories />
-			<View style={{ height: "10%" }}>
-				<HomeCategories />
-			</View>
-			<View style={{ height: "40%" }}>
-				<ThoughtCard />
-			</View>
+			<ScrollView>
+				<View style={{ height: 0.1 * windowHeight, marginBottom: 10 }}>
+					<HomeHero />
+				</View>
+				<View style={{ height: 0.1 * windowHeight, marginBottom: 10 }}>
+					<HomeShare />
+				</View>
+				<HomeStories />
+				<View style={{ height: 0.1 * windowHeight, marginBottom: 10 }}>
+					<HomeCategories />
+				</View>
+				<View style={{ height: 0.3 * windowHeight, marginBottom: 10 }}>
+					<ThoughtCard />
+				</View>
+				<View style={{ height: 0.3 * windowHeight, marginBottom: 10 }}>
+					<ThoughtCard />
+				</View>
+			</ScrollView>
 		</View>
 	);
 };

@@ -4,6 +4,7 @@ import React from "react";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 
 import { AppStyles } from "../../styles/AppStyles";
+import { windowHeight } from "../../utils/Dimensions";
 
 const BottomProfile = () => {
 	return (
@@ -48,6 +49,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		borderRadius: 24,
 		overflow: "hidden",
+		marginBottom: 10,
+		height: 0.18 * windowHeight,
 	},
 	topSection: {
 		height: "70%",
@@ -62,7 +65,6 @@ const styles = StyleSheet.create({
 		// backgroundColor: "#403c47",
 	},
 	left: {
-		// backgroundColor: "purple",
 		justifyContent: "center",
 		borderBottomRightRadius: 24,
 		paddingHorizontal: 15,
